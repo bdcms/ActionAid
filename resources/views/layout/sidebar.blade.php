@@ -2,18 +2,25 @@
 	<div class="nav-collapse sidebar-nav">
 		<ul class="nav nav-tabs nav-stacked main-menu"> 
 
-			<li>
+			{{-- <li>
 				<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Activities</span><span class="label label-important"> 3 </span></a>
 				<ul>
 					<li><a class="submenu" href="{{URL::to('/AllActivities')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> Activities List</span></a></li>
 					<li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 2</span></a></li>
 					<li><a class="submenu" href="submenu3.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 3</span></a></li>
 				</ul>	
-			</li> 
+			</li>  --}}
 
 
 
 			<li><a href="index.html"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
+			<li>
+			<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Users</span><span class="label label-important"></span></a>
+				<ul>
+					<li><a class="submenu" href="{{url('allUsers/')}}"><i class="icon-file-alt"></i><span class="hidden-tablet">User List</span></a></li>
+					<li><a class="submenu" href="{{url('newUser/')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add New</span></a></li> 
+				</ul>	
+			</li>	
 			<li><a href="messages.html"><i class="icon-envelope"></i><span class="hidden-tablet"> Messages</span></a></li>
 			<li><a href="tasks.html"><i class="icon-tasks"></i><span class="hidden-tablet"> Tasks</span></a></li>
 			<li><a href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> UI Features</span></a></li>

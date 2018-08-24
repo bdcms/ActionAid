@@ -21,7 +21,10 @@ class LoginController extends Controller
             'password'	=> 'required',  
         ]); 
 
-        $user = DB::table('ai_users')->where('us_email',$request->email)->where('us_password',md5($request->password))
+        $user = DB::table('ai_users')
+                ->where('us_email',$request->email)
+                ->where('us_password',md5($request->password))
+                ->where('status',1)
         		->join('ai_role','ai_role.ro_id','=','ai_users.role_id') 
         		->select('ai_users.*','ai_role.ro_name','ai_role.ro_id') 
         		->first(); 
@@ -63,6 +66,9 @@ class LoginController extends Controller
 
 			    case "10": // Finance Officer Panel
 			        return Redirect('FinanceDashboard/'); 
+
+                case "11": // Hopp panel
+                    return Redirect('HoppDashboard/'); 
 
 			    default:
 			        return Redirect('/')->with(['class' => 'danger','msg'=>'Something is not right!']);

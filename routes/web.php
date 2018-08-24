@@ -22,12 +22,25 @@ Route::get('/logout','LoginController@logout');
 
 //Admin panel
 Route::get('/AdminDashboard','AdminController@AdminDashboard');
+Route::get('/AllActivities','AdminController@activities_list');
+Route::get('/allUsers','AdminController@allUsers');
+Route::get('/newUser','AdminController@newUser');
+Route::post('/addUser','AdminController@addUser');
+
+//Admin ajax request
+// Route::get('/userActive/{id}','AdminController@userActive');
+// Route::get('/userUnactive/{id}','AdminController@userUnactive');
+
+
 
 //Country Director panel
 Route::get('/CountryDashboard','CountryController@CountryDashboard');
 
 //HROD panel
 Route::get('/HrodDashboard','HrodController@HrodDashboard');
+
+//HOPP panel
+Route::get('/HoppDashboard','HoppController@HoppDashboard');
 
 //HOFSP panel
 Route::get('/HofspDashboard','HofspController@HofspDashboard');
@@ -60,12 +73,6 @@ Route::post('/updateProfile','ProfileController@updateProfile');
 
 
 
-
-
-
-// Alll of Activities Routing link start
-Route::get('/AllActivities','AdminController@activities_list');
-// Alll of Activities Routing link exit
 
 
 Auth::routes();

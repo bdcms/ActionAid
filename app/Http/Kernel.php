@@ -67,6 +67,7 @@ class Kernel extends HttpKernel
         'onlyFinance'   => \App\Http\Middleware\onlyFinance::class,
         'onlyHofsp'     => \App\Http\Middleware\onlyHofsp::class,
         'onlyHrod'      => \App\Http\Middleware\onlyHrod::class,
+        'onlyHopp'      => \App\Http\Middleware\onlyHopp::class,
         'onlyHub'       => \App\Http\Middleware\onlyHub::class,
         'onlyLine'      => \App\Http\Middleware\onlyLine::class,
         'onlyMel'       => \App\Http\Middleware\onlyMel::class,

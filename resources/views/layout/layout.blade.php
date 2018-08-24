@@ -27,7 +27,14 @@
 	<!-- start: Favicon -->
 	<link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
 	<!-- end: Favicon -->
-	
+
+<!-- togole button style -->
+<style> 
+div.userReg
+{
+  display:none;
+}
+</style>
 		
 		
 		
@@ -162,6 +169,35 @@
 		<script src="{{asset('js/retina.js')}}"></script>
 
 		<script src="{{asset('js/custom.js')}}"></script>
+
+		<script type="text/javascript">
+			$('#category').on('change', function () {
+			    $('div.userReg').hide();
+			    var val = $('#category option:selected').val();
+			    console.log(val);
+			    $('#div' + val).show();
+			});
+		</script>
+
+		{{-- <script type="text/javascript">
+    $('#active').click(function(){   
+    	//alert('Something');
+	       $.ajax({
+			url:"{{ url('/ajax_status_active'.'/'.$user->us_id)}}",
+			method:"GET",
+			data:{_token:'{{csrf_token()}}'},
+			success:function(data){
+				//alert('');
+				// $('#keystatus').fadeIn();
+				// $('#keystatus').html(data);
+				console.log(data);
+			}
+		});
+});
+    // setInterval(function(){
+    //     $('#autoview').load("{{url('/showdata')}}").fadeIn('slow');
+    // },1000);
+</script> --}}
 	<!-- end: JavaScript-->
 	
 </body>
