@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="{{url('Admin')}}/dist/css/AdminLTE.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="{{url('Admin')}}/plugins/iCheck/square/blue.css">
+  <link rel="stylesheet" href="{{url('Admin')}}/dist/css/customize_css.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,8 +27,9 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+ 
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background:url('{{URL::to('')}}/images/login.jpg') no-repeat center center fixed;">
 <div class="login-box">
 
     @if(session('msg'))
@@ -37,11 +39,11 @@
     @endif
 
   <div class="login-logo">
-    <a href="#"><b>Admin</b>LTE</a>
+    <a href="#"><b>Action</b>AID</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Sign in to start your session</p>
+    <p class="login-box-msg">Sign in to start your session</p> 
 
     <form action="{{url('checkAuth/')}}" method="post">
       {{csrf_field()}}
@@ -80,7 +82,7 @@
     </div> --}}
     <!-- /.social-auth-links -->
 
-    <a href="#">I forgot my password</a><br>
+    <a href="#">I forgot my password</a><br> 
 {{--     <a href="register.html" class="text-center">Register a new membership</a> --}}
 
   </div>

@@ -24,13 +24,15 @@
 	</div>
 	<!-- /.box-header -->
 	<!-- form start -->
-	<form class="form-horizontal" action="{{url('addUser/')}}" method="post">
+	<form action="{{url('addUser/')}}" method="post" role="form" class="default_form">
 		{{csrf_field()}}
 	  <div class="box-body">  
 		<div class="form-group">
+		    <div class="col-sm-3">
 	      <label for="inputEmail3" class="col-sm-2 control-label">User Email:</label> 
-	      <div class="col-sm-10">
-	        <input type="email" name="email" class="form-control" id="inputEmail3" ">
+	      </div>
+	      <div class="col-sm-7">
+	        <input type="email" name="email" class="form-control" id="inputEmail3" >
 	        <span class="text-danger">{{ $errors->first('email')}} </span>
 	      </div>
 	    </div> 
@@ -45,7 +47,7 @@
 	    <div class="form-group">
 	    	<label for="inputEmail3" class="col-sm-2 control-label">Role:</label> 
 	      	<div class="col-sm-10"> 
-			    <select id="category" name="roleId">
+			    <select id="category" name="roleId" class="form-control">
 				    <option value="" disabled="disabled" selected="selected">Please select a Role</option>
 				    <option value="2">Country Director</option>
 				    <option value="3">HROD</option>
@@ -69,7 +71,7 @@
 		<div id="div8" class="form-group userReg">
 		    <label class="col-sm-2 control-label">Line Manager:</label> 
 		      <div class="col-sm-10"> 
-		         <select id="lineManager" name="lineManager"> 
+		         <select id="lineManager" name="lineManager" class="form-control"> 
 		         	@php
 		         		$result = DB::table('ai_users')->where('role_id',7)->get();
 		         	@endphp
@@ -85,7 +87,7 @@
 		<div id="div9" class="form-group userReg">
 		    <label class="col-sm-2 control-label">Line Manager:</label> 
 		      <div class="col-sm-10"> 
-		         <select id="lineManager" name="lineManager"> 
+		         <select id="lineManager" name="lineManager" class="form-control"> 
 		         	@php
 		         		$result = DB::table('ai_users')->where('role_id',7)->get();
 		         	@endphp
@@ -101,7 +103,7 @@
 		<div id="div6" class="form-group userReg">
 		    <label class="col-sm-2 control-label">Hub Coordinator:</label> 
 		      <div class="col-sm-10"> 
-		         <select id="hubCoordinator" name="hubCoordinator"> 
+		         <select id="hubCoordinator" name="hubCoordinator" class="form-control"> 
 		         	@php
 		         		$result = DB::table('ai_users')->where('role_id',5)->get();
 		         	@endphp
@@ -117,7 +119,7 @@
 		<div id="div7" class="form-group userReg">
 		    <label class="col-sm-2 control-label">Hopp:</label> 
 		      <div class="col-sm-10"> 
-		         <select id="hopp" name="hopp"> 
+		         <select id="hopp" name="hopp" class="form-control"> 
 		         	@php
 		         		$result = DB::table('ai_users')->where('role_id',11)->get();
 		         	@endphp
@@ -133,7 +135,7 @@
 		<div id="div5" class="form-group userReg">
 		    <label class="col-sm-2 control-label">Hofsp:</label> 
 		      <div class="col-sm-10"> 
-		         <select id="Hofsp" name="Hofsp"> 
+		         <select id="Hofsp" name="Hofsp" class="form-control"> 
 		         	@php
 		         		$result = DB::table('ai_users')->where('role_id',4)->get();
 		         	@endphp
