@@ -7,16 +7,16 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="{{url('Admin')}}/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{url('public/admin')}}/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{url('Admin')}}/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{url('public/admin')}}/bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="{{url('Admin')}}/bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="{{url('public/admin')}}/bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{url('Admin')}}/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="{{url('public/admin')}}/dist/css/AdminLTE.min.css">
   <!-- iCheck -->
-  <link rel="stylesheet" href="{{url('Admin')}}/plugins/iCheck/square/blue.css">
-  <link rel="stylesheet" href="{{url('Admin')}}/dist/css/customize_css.css">
+  <link rel="stylesheet" href="{{url('public/admin')}}/plugins/iCheck/square/blue.css">
+  <link rel="stylesheet" href="{{url('public/admin')}}/dist/css/customize_css.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
  
 </head>
-<body class="hold-transition login-page" style="background:url('{{URL::to('')}}/images/login.jpg') no-repeat center center fixed;">
+<body class="hold-transition login-page" style="background:url('{{URL::to('public')}}/images/login.jpg') no-repeat center center fixed;">
 <div class="login-box">
 
     @if(session('msg'))
@@ -91,11 +91,11 @@
 <!-- /.login-box -->
 
 <!-- jQuery 3 -->
-<script src="{{url('Admin')}}/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="{{url('public/admin')}}/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="{{url('Admin')}}/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="{{url('public/admin')}}/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- iCheck -->
-<script src="{{url('Admin')}}/plugins/iCheck/icheck.min.js"></script>
+<script src="{{url('public/admin')}}/plugins/iCheck/icheck.min.js"></script>
 <script>
   $(function () {
     $('input').iCheck({
